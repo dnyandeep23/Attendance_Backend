@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 
 initializeApp({
     credential: applicationDefault(),
-    projectId: 'potion-for-creators',
+    projectId: 'attendance-go',
 });
 
 app.post("/send", function (req, res) {
