@@ -1,21 +1,21 @@
- import { initializeApp, applicationDefault } from 'firebase-admin/app';
+// import { initializeApp, credential as _credential } from "firebase-admin";
+import { initializeApp, applicationDefault } from 'firebase-admin/app';
 import { getMessaging } from 'firebase-admin/messaging';
 import express, { json } from 'express';
-
 import cors from 'cors';
 // import serviceAccount from "path/to/serviceAccountKey.json";
 
 process.env.GOOGLE_APPLICATION_CREDENTIALS;
-@ -12,49 +12,49 @@
+
+const app = express();
+app.use(express.json());
 
 
 app.use(cors({
-    origin:"*",
     origin: "*",
 }));
 
 app.use(cors({
-   methods:["GET","POST","PUT","DELETE","UPDATE","PATCH"],
     methods: ["GET", "POST", "PUT", "DELETE", "UPDATE", "PATCH"],
 }));
 
